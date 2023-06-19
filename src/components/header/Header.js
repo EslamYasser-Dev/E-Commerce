@@ -1,98 +1,18 @@
 import React, { useState } from 'react'
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import SearchIcon from '@mui/icons-material/Search';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { logo } from "../../assets/index"
+import { allItems } from '../../constants';
+import HeaderBottom from './HeaderBottom';
 
 const Header = () => {
   const [showAll, setShowAll] = useState(false);
-  const allItems = [
-    {
-      _id: 101, title: "All Departments"
-    },
-    {
-      _id: 102, title: "Automotive"
-    },
-    {
-      _id: 103, title: "Baby"
-    },
-    {
-      _id: 104, title: "Beauty & personal care"
-    },
-    {
-      _id: 105, title: "Books"
-    },
-    {
-      _id: 106, title: "Boy's Fashion"
-    },
-    {
-      _id: 107, title: "Computers"
-    },
-    {
-      _id: 108, title: "Deals"
-    },
-    {
-      _id: 109, title: "Digital Music"
-    },
-    {
-      _id: 110, title: "Electronics"
-    },
-    {
-      _id: 111, title: "Girls Fashion"
-    },
-    {
-      _id: 112, title: "Health & houseHold"
-    },
-    {
-      _id: 113, title: "Home & kitchen"
-    },
-    {
-      _id: 114, title: "Industrial & Scientific"
-    },
-    {
-      _id: 115, title: "Kindle Store"
-    },
-    {
-      _id: 116, title: "Used Items"
-    },
-    {
-      _id: 117, title: "Misslenous"
-    },
-    {
-      _id: 118, title: "Raw Msterials"
-    },
-    {
-      _id: 119, title: "Music, CD & vinyl"
-    },
-    {
-      _id: 120, title: "Pet Suppliers"
-    },
-    {
-      _id: 121, title: "Prime Videos"
-    },
-    {
-      _id: 122, title: "Software"
-    },
-    {
-      _id: 123, title: "Sports & Outdoors"
-    },
-    {
-      _id: 124, title: "tool & home improvements"
-    },
-    {
-      _id: 125, title: "Toys & Games"
-    },
-    {
-      _id: 126, title: "Video Games"
-    },
-    {
-      _id: 127, title: "Women's Fashion"
-    }
-  ];
+
   return (
-    <div>
-      <div className='w-full bg-amazon_blue text-white px-4 py-3 flex items-center gap-4'>
+    <div className="w-full">
+      <div className="w-full bg-amazon_blue text-white px-4 py-3 flex items-center gap-4">
         <div className="headerhover">
           <img className="w-24 mt-2" src={logo} alt="logo" />
         </div>
@@ -102,6 +22,7 @@ const Header = () => {
           <p className="text-sm text text-lightText font-light flex flex-col">Deliver to
             <span className="text-sm font-semibold -mt-1 text-whiteText">Egypt</span></p>
         </div>
+        {/* <!---------------------------------------------Search Starts Here --> */}
 
         <div className="h-10 rounded-md flex flex-grow relative">
           <span onClick={() => setShowAll(!showAll)}
@@ -121,14 +42,33 @@ const Header = () => {
               </ul>
             </div>
           )}
-          <input type='text' className="h-full text-base text-amazon_blue flex flex-grow outline-none border-none px-2" />
+          <input type='text' placeholder='Search Amazon' className="h-full text-base text-amazon_blue flex flex-grow outline-none border-none px-2" />
           <span className="w-12 h-full flex items-center justify-center bg-amazon_yellow
            hover:bg-[#f3a847] duration-300 text-amazon_blue cursor-pointer rounded-tr-md rounded-br-md"><SearchIcon /></span>
         </div>
-
-
-
+        {/* <!---------------------------------------------Sign In Starts Here --> */}
+        <div className="flex flex-col items-start justify-center headerhover">
+          <p className="text-xs text-lightText font-light">Hello, Sign in</p>
+          <p className="text-sm font-semibold -mt-1 text-whiteText">Accounts & Lists{" "} <span><ArrowDropDownOutlinedIcon /></span></p>
+        </div>
+        {/* <!---------------------------------------------Sign In Ended Here --> */}
+        {/* <!---------------------------------------------Orders Starts Here --> */}
+        <div className="flex flex-col items-start justify-center headerhover">
+          <p className="text-xs text-lightText font-light">Returns</p>
+          <p className="text-sm font-semibold -mt-1 text-whiteText">& Orders</p>
+        </div>
+        {/* <!--------------------------------------------- Orders Ended Here --> */}
+        {/* <!---------------------------------------------Cart Starts Here --> */}
+        <div className="flex items-start justify-center relative headerhover">
+          <ShoppingCartIcon />
+          <p className="text-xs font-semibold mt-3 text-whiteText">Cart <span className="absolute text-xs -top-1 left-6 font-semibold
+          p-1 h-4 bg-[#f3a847] text-amazon_blue rounded-full flex justify-center items-center">0 </span></p>
+        </div>
+        {/* <!---------------------------------------------Cart ends Here --> */}
       </div>
+      {/* <!---------------------------------------------Bottom starts Here --> */}
+
+      <HeaderBottom />
     </div>
   );
 }
