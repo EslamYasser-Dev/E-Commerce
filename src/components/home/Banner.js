@@ -38,7 +38,10 @@ const Banner = () => {
         ),
         customPaging:(i) => (
             <div
-                style={{
+                style={
+                    
+                    (i === dotActive) ?
+                    {
                     width: "30px",
                     height:"30px",
                     borderRadius:"50%",
@@ -50,13 +53,25 @@ const Banner = () => {
                     padding:"8px 0",
                     cursor:"pointer",
                     border: "1px solid #f3a847"
-                }}
+                }:{
+                    width:"30px",
+                    height:"30px",
+                    borderRadius:"50%",
+                    display:"flex",
+                    alignItems:"center",
+                    justifyContent:"center",
+                    background:"#232f3f",
+                    color:"white",
+                    padding:"8px 0",
+                    cursor:"pointer",
+                    border:"1px solid white"
+                }
+            }
             >
                 {i + 1}
             </div>
         )
     };
-
 
     return (
         <div className='w-full'>
