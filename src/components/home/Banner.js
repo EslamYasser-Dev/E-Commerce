@@ -76,7 +76,7 @@ const Banner = () => {
     return (
         <div className='w-full'>
             <div className='w-full h-full relative'>
-                <Slider {...settings}>
+                 <Slider {...settings}> {/*kan mommken map bs ana 3ayz keda */}
                     <div>
                         <img src={bannerImgOne} alt="Banner Img One" />
                     </div>
