@@ -59,4 +59,4 @@ const HeaderBottom = () => {
     )
 }
 
-export default HeaderBottom
+export default HeaderBottom;

@@ -5,6 +5,10 @@
 @layer components{
     .headerhover{
         @apply px-2 h-[80%] flex items-center border border-transparent rounded-sm
-        hover:border-white cursor-pointer duration-100
+        hover:border-white cursor-pointer duration-100;
+    }
+
+    .footerlink{
+        @apply text-sm font-titleFont tracking-wide hover:text-gray-100 cursor-pointer hover:underline duration-150;
     }
 }
