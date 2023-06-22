@@ -2,21 +2,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer components{
-    .headerhover{
-        @apply px-2 h-[80%] flex items-center border border-transparent rounded-sm
-        hover:border-white cursor-pointer duration-100;
+
+@layer components {
+    .headerhover {
+        @apply px-2 h-[80%] flex items-center border border-transparent rounded-sm hover:border-white cursor-pointer duration-100;
     }
 
-    .footerlink{
+    .footerlink {
         @apply text-sm font-titleFont tracking-wide hover:text-gray-100 cursor-pointer hover:underline duration-150;
     }
 
-    .footerbottomtitle{
-        @apply w-24 font-semibold text-[12px] group-hover:underline text-[#DDD] leading-3 mb-[2px]; 
+    .footerbottomtitle {
+        @apply w-24 font-semibold text-[12px] group-hover:underline text-[#DDD] leading-3 mb-[2px];
     }
 
-    .footerbottomtxt{
-        @apply w-24 tracking-tight text-[12px] group-hover:underline text-[#999] leading-3; 
+    .footerbottomtxt {
+        @apply w-24 tracking-tight text-[12px] group-hover:underline text-[#999] leading-3;
     }
 }

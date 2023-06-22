@@ -2,16 +2,39 @@ import React from "react";
 import {
   createBrowserRouter,
   RouterProvider,
+  Route,
+  Outlet,
+  createRoutesFromElements
 } from "react-router-dom";
 import Header from "./components/header/Header";
-import Banner from "./components/home/Banner";
 import Footer from "./components/footer/Footer";
-function App() {
+import Home from "./pages/Home";
+
+
+const Layout = () => {
   return (
-    <div className="font-bodyFont ">
-     <Header/>
-     <Banner/>
-     <Footer/>
+    <div>
+      <Header />
+      <Outlet />
+      <Footer />
+    </div>
+
+  )
+}
+
+function App() {
+
+  const router = createBrowserRouter(createRoutesFromElements(
+      <Route path="/" element={<Layout />}>
+        <Route path="/home" element={<Home />}></Route>
+      </Route>
+
+
+  ));
+
+  return (
+    <div className="font-bodyFont">
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
