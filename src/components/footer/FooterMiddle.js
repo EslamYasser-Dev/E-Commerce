@@ -30,8 +30,14 @@ const FooterMiddle = () => {
                     <img className='w-20 pt-3' src={logo} alt='logo'/> 
                 </div>
 
-                <div className=''>
-                    <p>English</p>
+                <div className='flex gap-2'>
+                    <p className="flex gap-1 items-center justify-center border border-gray-500 
+                    hover:border-amazon_yellow cursor-pointer duration-200 px-2 py-1">English</p>
+                </div>
+                <div className='flex gap-1 items-center justify-center border border-gray-500 
+                    hover:border-amazon_yellow cursor-pointer duration-200 px-2 py-1'>
+                    <img className="w-6" src={egflag} alt='Egyptian flag'/>
+                    <p>Egypt</p>
                 </div>
             </div>
             {/*------------------------------bottom ends HERE---------------------------------- */}
