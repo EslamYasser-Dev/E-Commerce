@@ -17,6 +17,6 @@
     }
 
     .footerbottomtxt{
-        @apply w-24 tracking-tight text-[12px] group-hover:underline text-[#999] leading-3 mb-[2px]; 
+        @apply w-24 tracking-tight text-[12px] group-hover:underline text-[#999] leading-3; 
     }
 }

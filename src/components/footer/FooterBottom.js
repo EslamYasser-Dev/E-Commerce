@@ -9,7 +9,7 @@ const FooterBottom = () => {
 
           {
             footerBottomItem.map((item)=>(
-              <div key={item._id}>
+              <div className='group cursor-pointer' key={item._id}>
                 <h3 className='footerbottomtitle'>{item.title}</h3>
                 <p className='footerbottomtxt'>{item.des}</p>
               </div>
