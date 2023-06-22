@@ -1,9 +1,18 @@
+
 import React from 'react'
+import { useLoaderData } from 'react-router-dom'
 
 const Products = () => {
-  return (
-    <div>Products</div>
-  )
+
+    const data = useLoaderData();
+    const ProductData = data.data;
+    
+
+
+
+    return (
+        <div>Products</div>
+    )
 }
 
 export default Products
