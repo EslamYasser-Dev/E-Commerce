@@ -7,10 +7,6 @@ const Products = () => {
 
     const data = useLoaderData();
     const ProductData = data.data;
-
-
-
-
     return (
         <div className='max-w-screen-2xl mx-auto grid grid-cols-4 gap-10 px-4'>
             {
