@@ -8,11 +8,8 @@ import {
     bannerImgFive,
 } from "../../assets/index"
 
-
 const Banner = () => {
-
     const [dotActive, setDotActive] = useState(0);
-
     const settings = {
         dots: true,
         infinite: true,
@@ -24,16 +21,18 @@ const Banner = () => {
             setDotActive(next);
         },
         appendDots: (dots) => (
-            <div
+            <div 
                 style={{
                    position:"absolute",
                    top:"70%",
-                   left:"45%",
+                   left:"0%",
+                   right:"0%",
+                   margin:"0 auto",  
                    transform:"translate(-50%, -50%)",
                    width:"210px",
                 }}
             >
-                <ul style={{width:"100%",display:"flex",alignItems:"center",justifyContent:"space-between" }}> {dots} </ul>
+                <ul style={{width:"100%",display:"flex",alignItems:"center",justifyContent:"space-between" }}> {" "}{dots}{" "}</ul>
             </div>
         ),
         customPaging:(i) => (
@@ -70,7 +69,33 @@ const Banner = () => {
             >
                 {i + 1}
             </div>
-        )
+        ),
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
     };
 
     return (
