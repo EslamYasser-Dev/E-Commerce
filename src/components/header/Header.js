@@ -6,6 +6,10 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { logo } from "../../assets/index"
 import { allItems } from '../../constants';
 import HeaderBottom from './HeaderBottom';
+import {
+
+  Link
+} from "react-router-dom";
 
 const Header = () => {
   const [showAll, setShowAll] = useState(false);
@@ -13,9 +17,11 @@ const Header = () => {
   return (
     <div className="w-full sticky top-0 z-50">
       <div className="w-full bg-amazon_blue text-white px-4 py-3 flex items-center gap-4">
+        <Link to="./home">
         <div className="headerhover">
           <img className="w-24 mt-2" src={logo} alt="logo" />
         </div>
+        </Link>
 
         <div className="headerhover hidden mdl:inline-flex">
           <LocationOnOutlinedIcon />
@@ -47,10 +53,13 @@ const Header = () => {
            hover:bg-[#f3a847] duration-300 text-amazon_blue cursor-pointer rounded-tr-md rounded-br-md"><SearchIcon /></span>
         </div>
         {/* <!---------------------------------------------Sign In Starts Here --> */}
-        <div className="flex flex-col items-start justify-center headerhover">
-          <p className="text-sm mdl:text-xs text-white mdl:text-lightText font-light">Hello, Sign in</p>
-          <p className="text-sm font-semibold -mt-1 text-whiteText hidden mdl:inline-flex">Accounts & Lists{" "} <span><ArrowDropDownOutlinedIcon /></span></p>
-        </div>
+        <Link to="/signin">
+          <div className="flex flex-col items-start justify-center headerhover">
+            <p className="text-sm mdl:text-xs text-white mdl:text-lightText font-light">Hello, Sign in</p>
+            <p className="text-sm font-semibold -mt-1 text-whiteText hidden mdl:inline-flex">
+              Accounts & Lists{" "} <span><ArrowDropDownOutlinedIcon /></span></p>
+          </div>
+        </Link>
         {/* <!---------------------------------------------Sign In Ended Here --> */}
         {/* <!---------------------------------------------Orders Starts Here --> */}
         <div className="hidden lgl:flex flex-col items-start justify-center headerhover">
