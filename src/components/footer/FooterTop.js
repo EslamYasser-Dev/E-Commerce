@@ -7,7 +7,7 @@ const FooterTop = () => {
       <div className="w-full border-t-[1px] border-b-[1px] py-8">
         <div className="w-64 mx-auto text-center flex flex-col gap-.5">
           <p className="text-sm">see personalized recommendation</p>
-          <Link>
+          <Link to="./signin">
             <button
               className="w-full bg-yellow-400 rounded-md py-1 font-semibold 
                  cursor-pointer active:bg-yellow-700"
