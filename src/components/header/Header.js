@@ -7,10 +7,12 @@ import { logo } from "../../assets/index";
 import { allItems } from "../../constants";
 import HeaderBottom from "./HeaderBottom";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [showAll, setShowAll] = useState(false);
-
+  const products = useSelector((state) => state.amazonReducer.products);
+  console.log(products);
   return (
     <div className="w-full sticky top-0 z-50">
       <div className="w-full bg-amazon_blue text-white px-4 py-3 flex items-center gap-4">
