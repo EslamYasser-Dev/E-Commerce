@@ -102,7 +102,7 @@ const Header = () => {
               className="absolute text-xs -top-1 left-6 font-semibold
           p-1 h-4 bg-[#f3a847] text-amazon_blue rounded-full flex justify-center items-center"
             >
-              0{" "}
+              {products.length > 0 ? products.length : 0}
             </span>
           </p>
         </div>
